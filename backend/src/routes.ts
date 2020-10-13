@@ -16,7 +16,8 @@ import OrphanagesController from "./controllers/OrphanagesController";
 
 const routes = Router();
 
-// CREATE ORPHANAGE
+// Padrão Controller = index, show, create, update, delete
+routes.get("/orphanages", OrphanagesController.index);
 routes.post("/orphanages", OrphanagesController.create);
 
 export default routes;
