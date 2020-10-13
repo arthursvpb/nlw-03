@@ -13,7 +13,9 @@ yarn typeorm migration:create -n create_images
 // rodar
 yarn typeorm migration:run
 
-
 // upload de arquivos
 yarn add multer
 yarn add @types/multer -D
+
+// tratativa de erros
+yarn add express-async-errors 
