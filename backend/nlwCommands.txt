@@ -19,3 +19,7 @@ yarn add @types/multer -D
 
 // tratativa de erros
 yarn add express-async-errors 
+
+// validação de dados
+yarn add yup
+yarn add @types/yup -D
