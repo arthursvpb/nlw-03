@@ -23,3 +23,7 @@ yarn add express-async-errors
 // validação de dados
 yarn add yup
 yarn add @types/yup -D
+
+// adicionar cors
+yarn add cors
+yarn add @types/cors -D
