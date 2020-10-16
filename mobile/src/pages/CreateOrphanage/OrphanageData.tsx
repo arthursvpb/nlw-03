@@ -10,8 +10,13 @@ import {
 } from "react-native";
 import { Feather } from "@expo/vector-icons";
 import { RectButton } from "react-native-gesture-handler";
+import { useRoute } from "@react-navigation/native";
 
 export default function OrphanageData() {
+  const route = useRoute();
+
+  console.log(route.params);
+
   return (
     <ScrollView
       style={styles.container}
@@ -25,8 +30,8 @@ export default function OrphanageData() {
       <Text style={styles.label}>Sobre</Text>
       <TextInput style={[styles.input, { height: 110 }]} multiline />
 
-      <Text style={styles.label}>Whatsapp</Text>
-      <TextInput style={styles.input} />
+      {/* <Text style={styles.label}>Whatsapp</Text>
+      <TextInput style={styles.input} /> */}
 
       <Text style={styles.label}>Fotos</Text>
       <TouchableOpacity style={styles.imagesInput} onPress={() => {}}>
