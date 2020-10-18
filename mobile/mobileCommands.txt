@@ -8,3 +8,6 @@ expo install react-native-gesture-handler react-native-reanimated react-native-s
 yarn add @react-navigation/stack
 yarn add axios
 expo install expo-image-picker
+
+(extra - lottie + expo)
+expo install lottie-react-native

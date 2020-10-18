@@ -8,6 +8,7 @@ import {
   Dimensions,
   TouchableOpacity,
   Linking,
+  SafeAreaView,
 } from "react-native";
 import MapView, { Marker } from "react-native-maps";
 import { Feather, FontAwesome } from "@expo/vector-icons";
@@ -16,6 +17,9 @@ import { useRoute } from "@react-navigation/native";
 
 import mapMarkerImg from "../images/map-marker.png";
 import api from "../services/api";
+
+import LottieView from "lottie-react-native";
+import rocket from "../../assets/rocket-funk.json";
 
 interface OrphanageDetailsRouteParams {
   id: number;
@@ -50,9 +54,22 @@ export default function OrphanageDetails() {
 
   if (!orphanage) {
     return (
-      <View style={styles.container}>
-        <Text style={styles.description}>Carregando...</Text>
-      </View>
+      // <View style={styles.container}>
+      //   <Text style={styles.description}>Carregando...</Text>
+      // </View>
+      <SafeAreaView
+        style={{ flex: 1, justifyContent: "center", alignItems: "center" }}
+      >
+        <View>
+          <LottieView
+            resizeMode="contain"
+            autoSize
+            source={rocket}
+            autoPlay
+            loop
+          ></LottieView>
+        </View>
+      </SafeAreaView>
     );
   }
 
